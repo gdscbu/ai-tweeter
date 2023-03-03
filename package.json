@@ -1,0 +1,19 @@
+{
+    "name": "ai-tweeter",
+    "description": "Tweet creator using ChatGPT",
+    "version": "0.0.0",
+    "license": "Zlib",
+    "bugs": "https://github.com/gdscbu/ai-tweeter/issues",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gdscbu/ai-tweeter.git"
+    },
+    "author": {
+        "name": "Vasanth Developer",
+        "email": "vasanth@vasanthdeveloper.com",
+        "url": "https://vsnth.dev"
+    },
+    "devDependencies": {
+        "@vercel/node": "^2.9.10"
+    }
+}
