@@ -13,9 +13,16 @@
         "email": "vasanth@vasanthdeveloper.com",
         "url": "https://vsnth.dev"
     },
+    "scripts": {
+        "dev": "vite src"
+    },
     "devDependencies": {
         "@vercel/node": "^2.9.10",
+        "autoprefixer": "^10.4.13",
         "openai": "^3.2.1",
+        "postcss": "^8.4.21",
+        "tailwindcss": "^3.2.7",
+        "vite": "^4.1.4",
         "zod": "^3.20.6"
     }
 }
