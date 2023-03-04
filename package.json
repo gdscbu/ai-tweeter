@@ -14,7 +14,8 @@
         "url": "https://vsnth.dev"
     },
     "scripts": {
-        "dev": "vite src"
+        "dev": "vite --config vite.config.js src",
+        "build": "vite --config vite.config.js build src"
     },
     "devDependencies": {
         "@vercel/node": "^2.9.10",
