@@ -14,6 +14,13 @@ const bodySchema = z.object({
 })
 
 export default async (req: VercelRequest, res: VercelResponse) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+    res.setHeader('Access-Control-Allow-Credentials', 'true')
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With')
+
+    if (req.method == 'OPTIONS') return res.status(200).send('ok')
+
     // make sure it's a POST request
     if (req.method != 'POST') return res.status(405).json({
         message: 'method not allowed'
@@ -51,10 +58,6 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     })
 
     const tweet = tweets.data.choices[0]
-
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
-    res.setHeader('Access-Control-Allow-Credentials', 'true')
 
     return res.status(200).json({
         prompt,
