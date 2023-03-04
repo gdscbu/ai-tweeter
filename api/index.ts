@@ -52,6 +52,10 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
     const tweet = tweets.data.choices[0]
 
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+    res.setHeader('Access-Control-Allow-Credentials', 'true')
+
     return res.status(200).json({
         prompt,
         tweet: tweet.message?.content.slice(1, -1).trim(),
